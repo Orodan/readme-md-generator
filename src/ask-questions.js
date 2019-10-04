@@ -19,6 +19,8 @@ module.exports = async (projectInfos, useDefaultAnswers) => {
     ? utils.getDefaultAnswers(questions)
     : await inquirer.prompt(questions)
 
+  console.log('answersContext: ', answersContext)
+
   return {
     isGithubRepos: projectInfos.isGithubRepos,
     repositoryUrl: projectInfos.repositoryUrl,
